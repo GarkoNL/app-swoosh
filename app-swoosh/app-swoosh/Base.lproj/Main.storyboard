@@ -39,6 +39,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="xRW-oP-nfo" kind="show" id="NzQ-Dn-nyx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMZ-au-YCv">
                                 <rect key="frame" x="57.5" y="78" width="260" height="67"/>
@@ -165,6 +168,17 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRQ-Bf-VfQ">
+                                <rect key="frame" x="20" y="30" width="29" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="YYk-dV-4RD"/>
+                                    <constraint firstAttribute="width" constant="29" id="seL-I3-gJb"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="z7Z-Ye-sEU" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="Gcg-6u-ANh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -177,8 +191,10 @@
                             <constraint firstItem="T3W-mo-SVb" firstAttribute="leading" secondItem="8tH-9v-eAg" secondAttribute="leading" constant="20" id="HLN-eL-gXK"/>
                             <constraint firstItem="CI8-Re-25n" firstAttribute="bottom" secondItem="8tH-9v-eAg" secondAttribute="bottom" id="SsD-pi-G0Y"/>
                             <constraint firstItem="CI8-Re-25n" firstAttribute="top" secondItem="Iry-sw-igi" secondAttribute="top" id="b40-Yp-4Kq"/>
+                            <constraint firstItem="sRQ-Bf-VfQ" firstAttribute="leading" secondItem="8tH-9v-eAg" secondAttribute="leading" constant="20" id="inq-X9-UQa"/>
                             <constraint firstItem="8tH-9v-eAg" firstAttribute="bottom" secondItem="T3W-mo-SVb" secondAttribute="bottom" constant="20" id="nIQ-aI-D6c"/>
                             <constraint firstItem="CI8-Re-25n" firstAttribute="leading" secondItem="8tH-9v-eAg" secondAttribute="leading" id="nqN-68-DJp"/>
+                            <constraint firstItem="sRQ-Bf-VfQ" firstAttribute="top" secondItem="8tH-9v-eAg" secondAttribute="top" constant="10" id="oWt-MM-ibO"/>
                             <constraint firstItem="8tH-9v-eAg" firstAttribute="trailing" secondItem="wGv-uW-U0Z" secondAttribute="trailing" id="wnB-c6-TAS"/>
                             <constraint firstItem="wGv-uW-U0Z" firstAttribute="leading" secondItem="8tH-9v-eAg" secondAttribute="leading" id="zTC-xD-cjH"/>
                         </constraints>
@@ -186,6 +202,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehV-Ri-fJ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="z7Z-Ye-sEU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="848.79999999999995" y="132.68365817091455"/>
         </scene>
@@ -282,6 +299,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
